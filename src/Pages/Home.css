@@ -1,48 +1,74 @@
+:root {
+  --primary-color: #4F46E5;
+  --accent-color: #F472B6;
+  --bg-color: #F9FAFB;
+  --text-color: #111827;
+  --golden-ratio: 1.618;
+}
+
 #landing-cont {
-    background-color: #F8F9FA;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 8vh;
+  text-align: center;
+  overflow: hidden;
 }
 
 .hero {
-    text-align: center;
-    max-width: 600px;
-    padding: 2rem;
-    background-color: #FFFFFF;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 960px;
+  width: 90%;
+  padding: calc(1rem * var(--golden-ratio));
+  display: flex;
+  flex-direction: column;
+  gap: calc(1.25rem * var(--golden-ratio));
+  align-items: center;
+  animation: fadeIn 1.2s ease;
 }
 
 .hero-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #1A1A1A2E;
-    margin-bottom: 1rem;
+  font-size: calc(2.5rem * var(--golden-ratio));
+  color: rgba(30, 42, 71, 0.9);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    color: #1A1A2E;
-    margin-bottom: 2rem;
+  font-size: calc(1rem * var(--golden-ratio));
+  color: #4B5563; 
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 .cta-btn {
-    displaY: inline-block;
-    padding: 12px 24px;
-    font-size: 1rem;
-    background: linear-gradient(to right, #4361EE, #7209B7);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
 }
 
 .cta-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(67, 97, 238, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(244, 114, 182, 0.25);
+}
+
+/* Subtle fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
