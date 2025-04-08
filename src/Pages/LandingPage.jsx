@@ -1,8 +1,8 @@
 import React from 'react';
-import './Home.css';
+import './LandingPage.css';
 import { Link } from 'react-router-dom';
 
-function Home() {
+function LandingPage() {
   return (
     <div id="landing-cont">
       <div className="hero">
@@ -14,4 +14,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default LandingPage;

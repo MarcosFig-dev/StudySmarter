@@ -32,7 +32,7 @@ function SignUp() {
   return (
     <div className="signup-container">
       <h2 className="signup-title">Sign Up</h2>
-      <div className="signup=form">
+      <div className="signup-form">
         <input
           className="signup-input"
           type="text"
