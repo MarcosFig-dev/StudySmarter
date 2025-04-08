@@ -19,6 +19,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
   }
+
+  #navTitle a{
+    text-decoration: none;
+    color: #F7F7F7;
+  }
   
   ul {
     display: flex;
