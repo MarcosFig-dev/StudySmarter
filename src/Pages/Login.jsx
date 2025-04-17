@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { supabase } from "../supabaseClient";
+import { useNavigate } from "react-router-dom";
 import './Login.css';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     const { error } = await supabase.auth.signInWithPassword({
@@ -18,6 +20,7 @@ function Login() {
     }
     else {
       setMessage("Successfully logged in!");
+      navigate('/home');
     }
   };
 
